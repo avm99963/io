@@ -1,0 +1,24 @@
+# Problema de flujo de coste mínimo
+param n:=7;
+param flujo:=
+7 -45
+6 0
+5 0
+4 0
+3 0
+2 0
+1 45;
+param: ARCOS: capacidad coste:=
+1 2 20 8
+1 3 20 2
+1 4 20 4
+2 5 15 3
+2 7 15 6
+3 2 15 7
+3 4 15 5
+3 5 15 1
+3 6 15 5
+4 6 5 4
+5 6 20 6
+5 7 20 9
+6 7 25 1;

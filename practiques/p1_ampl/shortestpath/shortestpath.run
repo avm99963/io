@@ -1,0 +1,6 @@
+reset;
+model shortestpath.mod;
+data 66.dat;
+solve;
+display total_cost;
+display x;

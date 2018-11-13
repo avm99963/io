@@ -1,0 +1,7 @@
+reset;
+model maximumflow2.mod;
+data 66.dat;
+option solver cplex;
+solve;
+display total_flow;
+display x;
