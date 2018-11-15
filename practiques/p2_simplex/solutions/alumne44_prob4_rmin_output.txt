@@ -1,0 +1,12 @@
+[simplexP] Inici simplex primal amb regla de costos reduits minims
+[simplexP]   Fase I
+[simplexP]     Iteracio    1 : q =   8, rq =  -444.000, B(p) =  29, theta* =     0.111, z =  1121.667
+[simplexP]     Iteracio    2 : q =   9, rq =  -174.818, B(p) =   8, theta* =     0.524, z =  1030.095
+[simplexP]     Iteracio    3 : q =  16, rq =    -1.000, B(p) =  26, theta* =   165.238, z =   864.857
+[simplexP]     Iteracio    4 : q =  17, rq =    -1.000, B(p) =  27, theta* =    47.286, z =   817.571
+[simplexP]     Iteracio    5 : q =  18, rq =    -1.000, B(p) =  28, theta* =    54.286, z =   763.286
+[simplexP]     Iteracio    6 : q =  20, rq =    -1.000, B(p) =  30, theta* =    52.524, z =   710.762
+[simplexP]     Iteracio    7 : Solucio Basica Factible trobada!
+[simplexP] El problema no es factible perque a la fase I hem vist z > 0.
+[simplexP] Fi simplex primal
+

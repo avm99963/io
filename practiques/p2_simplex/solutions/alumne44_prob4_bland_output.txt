@@ -1,0 +1,13 @@
+[simplexP] Inici simplex primal amb regla de Bland
+[simplexP]   Fase I
+[simplexP]     Iteracio    1 : q =   1, rq =  -376.000, B(p) =  29, theta* =     0.117, z =  1127.000
+[simplexP]     Iteracio    2 : q =   2, rq =  -140.000, B(p) =   1, theta* =     0.275, z =  1088.500
+[simplexP]     Iteracio    3 : q =   9, rq =  -111.500, B(p) =   2, theta* =     0.524, z =  1030.095
+[simplexP]     Iteracio    4 : q =  16, rq =    -1.000, B(p) =  26, theta* =   165.238, z =   864.857
+[simplexP]     Iteracio    5 : q =  17, rq =    -1.000, B(p) =  27, theta* =    47.286, z =   817.571
+[simplexP]     Iteracio    6 : q =  18, rq =    -1.000, B(p) =  28, theta* =    54.286, z =   763.286
+[simplexP]     Iteracio    7 : q =  20, rq =    -1.000, B(p) =  30, theta* =    52.524, z =   710.762
+[simplexP]     Iteracio    8 : Solucio Basica Factible trobada!
+[simplexP] El problema no es factible perque a la fase I hem vist z > 0.
+[simplexP] Fi simplex primal
+

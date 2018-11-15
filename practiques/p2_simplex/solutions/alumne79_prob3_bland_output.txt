@@ -1,0 +1,21 @@
+[simplexP] Inici simplex primal amb regla de Bland
+[simplexP]   Fase I
+[simplexP]     Iteracio    1 : q =   1, rq =  -102.000, B(p) =  23, theta* =     0.449, z =   720.174
+[simplexP]     Iteracio    2 : q =   2, rq =   -84.391, B(p) =  29, theta* =     0.444, z =   682.703
+[simplexP]     Iteracio    3 : q =   3, rq =  -199.105, B(p) =  30, theta* =     0.285, z =   626.019
+[simplexP]     Iteracio    4 : q =   6, rq =  -309.921, B(p) =   2, theta* =     0.312, z =   529.409
+[simplexP]     Iteracio    5 : q =   4, rq =  -225.633, B(p) =   3, theta* =     0.160, z =   493.411
+[simplexP]     Iteracio    6 : q =   9, rq =  -177.012, B(p) =  26, theta* =     0.272, z =   445.193
+[simplexP]     Iteracio    7 : q =  11, rq =   -17.262, B(p) =   9, theta* =     0.222, z =   441.360
+[simplexP]     Iteracio    8 : q =  10, rq =    -4.231, B(p) =  25, theta* =     0.565, z =   438.969
+[simplexP]     Iteracio    9 : q =  12, rq =   -52.088, B(p) =   6, theta* =     0.039, z =   436.937
+[simplexP]     Iteracio   10 : q =  15, rq =    -1.305, B(p) =  10, theta* =    45.347, z =   377.754
+[simplexP]     Iteracio   11 : q =   6, rq =    -9.192, B(p) =  12, theta* =     0.366, z =   374.392
+[simplexP]     Iteracio   12 : q =   9, rq =   -17.802, B(p) =  11, theta* =     0.272, z =   369.542
+[simplexP]     Iteracio   13 : q =  17, rq =    -1.000, B(p) =  27, theta* =    97.448, z =   272.094
+[simplexP]     Iteracio   14 : q =   8, rq =   -21.056, B(p) =   6, theta* =     0.520, z =   261.138
+[simplexP]     Iteracio   15 : q =  18, rq =    -1.000, B(p) =  28, theta* =    50.490, z =   210.648
+[simplexP]     Iteracio   16 : Solucio Basica Factible trobada!
+[simplexP] El problema no es factible perque a la fase I hem vist z > 0.
+[simplexP] Fi simplex primal
+

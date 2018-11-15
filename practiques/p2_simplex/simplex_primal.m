@@ -1,11 +1,10 @@
 % Simplex Primal
-function [vb, vn, xb, z, iout] = simplex_primal(c, A, b, vb, vn, xb, z, bland, niter, faseII)
+function [vb, vn, xb, z, invB, iout] = simplex_primal(c, A, invB, b, vb, vn, xb, z, bland, niter, faseII)
 tol = 10^-12;
 
 cn = c(vn, :);
 cb = c(vb, :);
 B = A(:, vb);
-invB = inv(B);
 An = A(:, vn);
 
 r = (cn' - cb'*invB*An)';
@@ -21,11 +20,12 @@ if (min(r) >= 0)
   return;
 end
 
+q = -1;
+keyqit = 0;
+keyq = -1;
+
 if (bland)
-  q = -1;
-  keyqit = 0;
-  keyq = -1;
-  for i = vn % Regla de bland (ens ha sortit de casualitat)
+  for i = vn
     keyqit++;
     if (r(keyqit) < 0 && (i < q || q == -1))
       keyq = keyqit;
@@ -33,17 +33,8 @@ if (bland)
     endif
   endfor
 else
-  minrq = 0;
-  minkeyq = 0;
-  for i = vn
-    keyq++;
-    if (r(keyq) < minrq)
-      q = i;
-      minrq = r(keyq);
-      minkeyq = keyq;
-    endif
-  endfor
-  keyq = minkeyq;
+  [rq, keyq] = min(r);
+  q = vn(keyq);
 end
 
 db = -invB*A(:, q);
@@ -53,6 +44,14 @@ if (min(db) >= -tol)
   printf('[simplexP]     Iteracio %4d : Problema il.limitat detectat.\n', niter);
   iout = 2; % Problema il·limitat detectat
   return;
+end
+
+if (0 == 1)
+  vtheta = -xb./db;
+  [theta, keyp] = min(vtheta(db < 0));
+  p = vb(keyp);
+  p
+  vtheta
 end
 
 theta = -1;
@@ -79,6 +78,7 @@ xb += theta*db;
 xb(keyp) = theta;
 z += theta*r(keyq);
 xb;
+invB = actualitzacio_inversa(invB, db, keyp);
 
 % COPIAT PPT
 if (theta == 0 && !bland)
