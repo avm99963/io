@@ -8,11 +8,14 @@
   */
 
 // Configuracio:
-$folder = "data_octave/"; // Carpeta on estan les dades generades
+$folder_octave = "data_octave/"; // Carpeta on estan les dades generades per Octave
+$folder_cc = "data_cplusplus/"; // Carpeta on estan les dades generades per C++
 $solutions_file = "solutions.json"; // Fitxer json on tenim les solucions dels exemples (generat per exportsolutions.php)
 
-if ($argc < 2) die("\n== Utilitzacio del programa de testeig de casos publics ==\n\nExecuta el programa amb la seguent comanda des del directori principal: \"php publictesting/performtests.php taxacio\", on taxacio es el metode de taxacio que usara el simplex (bland o rmin).\n");
-$bland = ($argv[1] == "bland" ? true : false);
+if ($argc < 3) die("\n== Utilitzacio del programa de testeig de casos publics ==\n\nExecuta el programa amb la seguent comanda des del directori principal: \"php publictesting/performtests.php variant taxacio\", on variant es el programa que es vol usar (octave si es vol usar la implementacio a l'Octave o cc si es vol usar la implementacio al C++) i taxacio es el metode de taxacio que usara el simplex (bland o rmin).\n");
+$bland = ($argv[1] == "bland");
+$octave = ($argv[2] == "octave");
+$folder = ($octave ? $folder_octave : $folder_cc);
 
 echo "Test dels casos públics\n\n";
 
@@ -26,7 +29,7 @@ for ($t = 1; $t <= $testcases; ++$t) {
 
   $output = [];
   $return;
-  exec("./simplex {$t_file}A.dat {$t_file}b.dat {$t_file}c.dat ".($bland ? "bland" : "rmin"), $output, $return);
+  exec(($octave ? "./simplex" : "cplusplus/program")." {$t_file}A.dat {$t_file}b.dat {$t_file}c.dat ".($bland ? "bland" : "rmin"), $output, $return);
   //echo implode($output, "\n")."\n";
   if ($return != 0) {
     die("Hi ha hagut un error desconegut amb l'alumne $t (error ".$return.").\n");

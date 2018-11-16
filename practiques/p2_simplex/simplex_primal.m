@@ -77,7 +77,6 @@ vn(keyq) = p;
 xb += theta*db;
 xb(keyp) = theta;
 z += theta*r(keyq);
-xb;
 invB = actualitzacio_inversa(invB, db, keyp);
 
 % COPIAT PPT

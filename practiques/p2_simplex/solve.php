@@ -8,8 +8,9 @@
   */
 
 // Configuracio:
-$folder = "data_octave/"; // Carpeta on estan les dades generades
-$save_folder = "solutions/"; // Carpeta on volem guardar les solucions
+$folder_octave = "data_octave/"; // Carpeta on estan les dades per Octave generades
+$folder_cc = "data_cplusplus/"; // Carpeta on estan les dades per C++ generades
+$save_folder = "solutionscc/"; // Carpeta on volem guardar les solucions
 
 if (file_exists($save_folder)) {
   die("Ja existeix la carpeta '".$save_folder."'. Esborra-la per poder guardar les solucions alla.\n");
@@ -19,6 +20,10 @@ mkdir($save_folder);
 
 echo "Benvolgut a l'ajudant per solucionar els problemes!\n\nEscriu els alumnes dels quals vols resoldre els problemes, separats amb comes (p. ex: 44, 79): ";
 $problemes = array_map('intval', explode(",", fgets(STDIN)));
+echo "\nAra, quina implementacio vols utilitzar: Octave o C++? (respostes valides: octave, cc): ";
+$method = trim(fgets(STDIN));
+$octave = ($method == "octave");
+$folder = ($octave ? $folder_octave : $folder_cc);
 
 for ($bland = 0; $bland <= 1; ++$bland) {
   foreach ($problemes as $t) {
@@ -27,7 +32,7 @@ for ($bland = 0; $bland <= 1; ++$bland) {
 
       $output = [];
       $return;
-      exec("./simplex {$t_file}A.dat {$t_file}b.dat {$t_file}c.dat ".($bland ? "bland" : "rmin"), $output, $return);
+      exec(($octave ? "./simplex" : "cplusplus/program")." {$t_file}A.dat {$t_file}b.dat {$t_file}c.dat ".($bland ? "bland" : "rmin"), $output, $return);
       $outputtxt = implode($output, "\n")."\n";
       if ($return != 0) {
         die("Hi ha hagut un error desconegut amb l'alumne $t i problema $i (error ".$return.").\n");

@@ -1,0 +1,32 @@
+[simplexP] Inici simplex primal amb regla de costos reduits minims
+[simplexP]   Fase I
+[simplexP]     Iteracio    1 : q =  11, rq =  -366.000, B(p) =  27, theta* =     0.660, z =  1740.440
+[simplexP]     Iteracio    2 : q =   7, rq =  -801.920, B(p) =  30, theta* =     0.115, z =  1648.387
+[simplexP]     Iteracio    3 : q =   9, rq =  -467.305, B(p) =  24, theta* =     0.429, z =  1447.681
+[simplexP]     Iteracio    4 : q =   8, rq =  -299.560, B(p) =  28, theta* =     0.441, z =  1315.694
+[simplexP]     Iteracio    5 : q =  13, rq =  -468.918, B(p) =  23, theta* =     0.477, z =  1092.000
+[simplexP]     Iteracio    6 : q =   6, rq =  -497.883, B(p) =  29, theta* =     0.206, z =   989.220
+[simplexP]     Iteracio    7 : q =   4, rq =  -647.820, B(p) =  26, theta* =     0.597, z =   602.203
+[simplexP]     Iteracio    8 : q =  10, rq = -1326.546, B(p) =  22, theta* =     0.196, z =   342.178
+[simplexP]     Iteracio    9 : q =   3, rq =  -234.544, B(p) =  25, theta* =     0.919, z =   126.554
+[simplexP]     Iteracio   10 : q =   5, rq =  -135.777, B(p) =  21, theta* =     0.932, z =    -0.000
+[simplexP]     Iteracio   11 : Solucio Basica Factible trobada!
+[simplexP]   Fase II
+[simplexP]     Iteracio    1 : q =  14, rq =   -32.168, B(p) =   7, theta* =     1.159, z =  -370.904
+[simplexP]     Iteracio    2 : q =   2, rq =   -58.045, B(p) =   8, theta* =     1.116, z =  -435.682
+[simplexP]     Iteracio    3 : q =  20, rq =    -0.713, B(p) =   4, theta* =    75.179, z =  -489.289
+[simplexP]     Iteracio    4 : q =   8, rq =   -57.479, B(p) =  14, theta* =     1.407, z =  -570.161
+[simplexP]     Iteracio    5 : q =   7, rq =    -9.315, B(p) =  11, theta* =     0.620, z =  -575.932
+[simplexP]     Iteracio    6 : Solucio optima trobada! z = -575.931971
+[simplexP] Fi simplex primal
+
+VB* =
+    5   10   13    9    3   20    7    2    6    8
+
+xb* =
+   2.5997   0.3350   1.7866   1.7752   0.9582 282.8772   0.6195   1.3474   2.8948   1.4341
+
+VNB* =
+    1   14   12   11   15   16   17   18   19    4
+
+z* = -575.932

@@ -1,0 +1,40 @@
+[simplexP] Inici simplex primal amb regla de costos reduits minims
+[simplexP]   Fase I
+[simplexP]     Iteracio    1 : q =   5, rq =  -434.000, B(p) =  29, theta* =     1.133, z =  2372.133
+[simplexP]     Iteracio    2 : q =  11, rq =  -602.547, B(p) =  30, theta* =     0.126, z =  2296.159
+[simplexP]     Iteracio    3 : q =   9, rq =  -627.950, B(p) =  26, theta* =     0.283, z =  2118.536
+[simplexP]     Iteracio    4 : q =   1, rq =  -704.187, B(p) =  23, theta* =     0.790, z =  1562.320
+[simplexP]     Iteracio    5 : q =   8, rq =  -556.000, B(p) =  28, theta* =     0.480, z =  1295.458
+[simplexP]     Iteracio    6 : q =  12, rq =  -524.124, B(p) =  22, theta* =     1.173, z =   680.468
+[simplexP]     Iteracio    7 : q =   2, rq =  -563.918, B(p) =  21, theta* =     0.036, z =   660.308
+[simplexP]     Iteracio    8 : q =   6, rq =  -412.857, B(p) =  27, theta* =     0.690, z =   375.271
+[simplexP]     Iteracio    9 : q =   4, rq =  -515.214, B(p) =   9, theta* =     0.230, z =   256.985
+[simplexP]     Iteracio   10 : q =   3, rq =  -629.436, B(p) =  25, theta* =     0.004, z =   254.719
+[simplexP]     Iteracio   11 : q =  10, rq =  -161.762, B(p) =   3, theta* =     0.007, z =   253.528
+[simplexP]     Iteracio   12 : q =   9, rq =  -455.630, B(p) =  24, theta* =     0.556, z =     0.000
+[simplexP]     Iteracio   13 : Solucio Basica Factible trobada!
+[simplexP]   Fase II
+[simplexP]     Iteracio    1 : q =  14, rq =  -152.203, B(p) =  11, theta* =     1.978, z =  -146.719
+[simplexP]     Iteracio    2 : q =  13, rq =   -47.344, B(p) =   8, theta* =     0.925, z =  -190.524
+[simplexP]     Iteracio    3 : q =   7, rq =   -30.487, B(p) =   6, theta* =     2.913, z =  -279.328
+[simplexP]     Iteracio    4 : q =   3, rq =   -21.078, B(p) =   1, theta* =     0.042, z =  -280.207
+[simplexP]     Iteracio    5 : q =  11, rq =   -47.444, B(p) =   5, theta* =     0.031, z =  -281.701
+[simplexP]     Iteracio    6 : q =  16, rq =    -0.554, B(p) =  11, theta* =    12.082, z =  -288.394
+[simplexP]     Iteracio    7 : q =   1, rq =   -68.364, B(p) =   3, theta* =     0.712, z =  -337.055
+[simplexP]     Iteracio    8 : q =   8, rq =  -593.108, B(p) =  13, theta* =     0.168, z =  -436.853
+[simplexP]     Iteracio    9 : q =   6, rq =   -51.927, B(p) =   8, theta* =     0.768, z =  -476.734
+[simplexP]     Iteracio   10 : q =  19, rq =    -0.217, B(p) =  10, theta* =     7.096, z =  -478.274
+[simplexP]     Iteracio   11 : q =  20, rq =    -0.812, B(p) =   6, theta* =    16.812, z =  -491.931
+[simplexP]     Iteracio   12 : Solucio optima trobada! z = -491.931451
+[simplexP] Fi simplex primal
+
+VB* =
+    2   12    1    9   19    4    7   20   16   14
+
+xb* =
+   0.4511   2.8401   3.1853   0.6409  64.0605   1.5229   0.8975  16.8120 683.0917   4.0484
+
+VNB* =
+    8    3   13    5   15   11   17   18   10    6
+
+z* = -491.931

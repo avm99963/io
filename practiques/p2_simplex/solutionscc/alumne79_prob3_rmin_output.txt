@@ -1,0 +1,23 @@
+[simplexP] Inici simplex primal amb regla de costos reduits minims
+[simplexP]   Fase I
+[simplexP]     Iteracio    1 : q =   6, rq =  -388.000, B(p) =  29, theta* =     0.573, z =   543.547
+[simplexP]     Iteracio    2 : q =   9, rq =  -200.053, B(p) =  26, theta* =     0.196, z =   504.317
+[simplexP]     Iteracio    3 : q =   1, rq =   -99.914, B(p) =  23, theta* =     0.346, z =   469.725
+[simplexP]     Iteracio    4 : q =   4, rq =  -171.840, B(p) =  30, theta* =     0.143, z =   445.193
+[simplexP]     Iteracio    5 : q =  12, rq =   -48.435, B(p) =  28, theta* =     0.285, z =   431.409
+[simplexP]     Iteracio    6 : q =  11, rq =   -53.250, B(p) =   6, theta* =     0.129, z =   424.543
+[simplexP]     Iteracio    7 : q =  18, rq =    -1.143, B(p) =   9, theta* =    10.078, z =   413.024
+[simplexP]     Iteracio    8 : q =   3, rq =   -50.935, B(p) =  22, theta* =     0.487, z =   388.228
+[simplexP]     Iteracio    9 : q =  10, rq =   -63.008, B(p) =  12, theta* =     0.006, z =   387.872
+[simplexP]     Iteracio   10 : q =  15, rq =    -1.000, B(p) =  25, theta* =    53.591, z =   334.281
+[simplexP]     Iteracio   11 : q =   8, rq =   -25.148, B(p) =  10, theta* =     0.009, z =   334.060
+[simplexP]     Iteracio   12 : q =  17, rq =    -1.000, B(p) =  27, theta* =    47.097, z =   286.963
+[simplexP]     Iteracio   13 : q =   9, rq =   -57.367, B(p) =   8, theta* =     0.161, z =   277.753
+[simplexP]     Iteracio   14 : q =  13, rq =  -185.734, B(p) =   4, theta* =     0.053, z =   267.831
+[simplexP]     Iteracio   15 : q =   7, rq = -1866.452, B(p) =  11, theta* =     0.011, z =   246.439
+[simplexP]     Iteracio   16 : q =   8, rq =  -103.469, B(p) =   7, theta* =     0.025, z =   243.823
+[simplexP]     Iteracio   17 : q =   4, rq =   -14.226, B(p) =   3, theta* =     0.160, z =   241.541
+[simplexP]     Iteracio   18 : q =  22, rq =    -0.634, B(p) =  13, theta* =    48.711, z =   210.648
+[simplexP]     Iteracio   19 : Solucio Basica Factible trobada!
+[simplexP] El problema no es factible perque a la fase I hem vist z > 0.
+[simplexP] Fi simplex primal
