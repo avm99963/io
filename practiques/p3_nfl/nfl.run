@@ -6,5 +6,15 @@ display EQUIPS;
 display JORNADES;
 display PARTITS;
 solve;
-display x;
+
+#Ara escribim en el fitxer els resultats
+printf "%d %d %d\n", n, r, s > ampl_result.out;
+for {i in 1..(n/2)} {
+  for {j in (n/2 + 1)..n} {
+    for {k in 1..kmax} {
+      printf "%d %d %d %d\n", i, j, k, x[i,j,k] > ampl_result.out;
+    }
+  }
+}
+#display x;
 #display x.status;

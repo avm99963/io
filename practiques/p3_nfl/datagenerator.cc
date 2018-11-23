@@ -15,29 +15,22 @@ int main() {
   cin >> r;
   cout << "Introdueix el nombre s: ";
   cin >> s;
-  //cout << "Introdueix el nom del fitxer on vols guardar les dades: ";
   string filename = "nfl.dat";
-  //cin >> filename;
   
   ofstream file;
   file.open(filename);
   
   file << "param n:=" << n << ";\nparam r:=" << r << ";\nparam s:=" << s << ";\n\nparam: PARTITS: c:=\n";
 
-  for (int i = 1; i <= n; ++i) {
-    for (int j = i+1; j <= n; ++j) {
+  for (int i = 1; i <= n; ++i)
+    for (int j = i+1; j <= n; ++j)
       for (int k = 1; k <= (n/2)*(r+s) - r; ++k) {
         int v;
         if (i > n/2 || j <= n/2) {
           // Partits INTRAdivisionals
           if (k == 1) v = 0;
           else v = pow(2, k-2);
-        } else {
-          // Partits INTERdivisionals
-          v = 0;
-        }
+        } else v = 0; // Partits INTERdivisionals
         file << i << " " << j << " " << k << " " << v << (i == n-1 && j == n && k == (n/2)*(r+s) - r ? ";" : "") << endl;
       }
-    }
-  }
 }
