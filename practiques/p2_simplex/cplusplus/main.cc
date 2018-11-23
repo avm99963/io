@@ -5,15 +5,15 @@
 #include "simplex_primal.h"
 using namespace std;
 
-const double TOL = 1e-12;
+const double TOL = 1e-10;
 
 int main(int argc, char *argv[]) {
-  // file.open(argv[1]);
   if (argc < 5) {
     cout << "=== AJUDA ===:\n\nPer utilitzar el programa, executeu \"./program A.dat b.dat c.dat taxacio\", on A.dat\nes el fitxer amb la matriu A, i b.dat i c.dat fitxers amb els vectors b i c`.\n\nDespres del nom del fitxer, introduiu 'bland' per usar\nla regla de Bland, o 'rmin' per utilitzar la regla dels costos reduits minims.\n";
     return 0;
   }
 
+  // Llegim fitxers amb les dades
   ifstream Af;
   ifstream bf;
   ifstream cf;
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 
   bool bland = (string(argv[4]) == "bland");
 
-  // Let's start the simplex party!  
+  // Comencem a preparar la fase I del simplex amb les variables que usarem
   cout << "[simplexP] Inici simplex primal amb regla de " << (bland ? "Bland" : "costos reduits minims") << "\n";
   cout << "[simplexP]   Fase I\n";
   double** AI = create_pointer(m, n+m);
@@ -77,10 +77,10 @@ int main(int argc, char *argv[]) {
   double** xb = copia_punter(b, m, 1);
 
   double z = 0;
-  //cout << "n: " << n << ", m: " << m << endl;
   for (int i = 0; i < m; ++i)
     z += cI[vb[i]][0]*xb[i][0];
 
+  // Iterem pel simplex primal
   int ioutI = 0, niterI = 0;
   while (ioutI == 0) {
     ++niterI;
@@ -122,6 +122,7 @@ int main(int argc, char *argv[]) {
 
   cout << "[simplexP] Fi simplex primal\n";
 
+  // Si hem trobat una solucio optima, mostrem info sobre aquesta
   if (iout == 1) {
     cout << "\nVB* =\n";
     for (int i = 0; i < m; ++i)

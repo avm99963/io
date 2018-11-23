@@ -9,17 +9,18 @@ An = A(:, vn);
 
 r = (cn' - cb'*invB*An)';
 
-% COPIAT PP
+% Detectem si tenim una solucio optima
 if (min(r) >= 0)
   if (faseII)
     printf('[simplexP]     Iteracio %4d : Solucio optima trobada! z = %9.6f\n', niter, z);
   else
     printf('[simplexP]     Iteracio %4d : Solucio Basica Factible trobada!\n', niter);
   end
-  iout = 1; % Es una SBF òptima
+  iout = 1;
   return;
 end
 
+% Escollim quina variable no basica entra a la base
 q = -1;
 keyqit = 0;
 keyq = -1;
@@ -39,21 +40,14 @@ end
 
 db = -invB*A(:, q);
 
-% COPIAT PPT
+% Detectem problema il·limitat
 if (min(db) >= -tol)
   printf('[simplexP]     Iteracio %4d : Problema il.limitat detectat.\n', niter);
-  iout = 2; % Problema il·limitat detectat
+  iout = 2;
   return;
 end
 
-if (0 == 1)
-  vtheta = -xb./db;
-  [theta, keyp] = min(vtheta(db < 0));
-  p = vb(keyp);
-  p
-  vtheta
-end
-
+% Calculem valor de theta
 theta = -1;
 p = -1;
 keypit = 0;
@@ -71,6 +65,7 @@ for bel = vb
   endif
 endfor
 
+% Fem actualitzacions
 vb(keyp) = q;
 vn(keyq) = p;
 
@@ -79,7 +74,8 @@ xb(keyp) = theta;
 z += theta*r(keyq);
 invB = actualitzacio_inversa(invB, db, keyp);
 
-% COPIAT PPT
+% Detectem SBF degenerada, en cas que no estiguem utilitzant Bland,
+% perque aixo podria fer que el nostre algorisme es quedes buclat
 if (theta == 0 && !bland)
   printf('[simplexP]     Iteracio %4d : Solucio Basica Factible Degenerada detectada, no estem utilitzant la regla de Bland aixi que parem perque podria entrar en loop.\n', niter);
   iout = 3; % SBF degenerada

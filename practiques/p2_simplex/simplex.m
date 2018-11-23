@@ -10,7 +10,6 @@ end
 
 arglist = argv();
 
-% Aqui configurem si volem usar regla de Bland (true) o costos reduits minims (false)
 bland = true;
 if (nargin > 3)
   if (strcmp(arglist{4}, "rmin"))
@@ -86,6 +85,8 @@ else
 end
 
 display('[simplexP] Fi simplex primal');
+
+% Si hem trobat una solucio optima, mostrem info sobre aquesta
 if (iout == 1)
   printf('VB* =\n');
   disp(vb);

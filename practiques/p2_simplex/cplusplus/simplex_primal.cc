@@ -4,8 +4,9 @@
 #include "pointers.h"
 using namespace std;
 
-const int TOL = 1e-12;
+const int TOL = 1e-10;
 
+// Funcio que actualitza la inversa eficientment
 void actualitza_inversa(double** &invB, double** db, int indexp, int m) {
   double** E = create_pointer(m, m);
   for (int i = 0; i < m; ++i)
@@ -21,14 +22,6 @@ int simplex_primal(double** c, double** A, double** &invB, double** b, int* &vb,
   double** cn = create_pointer(n-m, 1);
   for (int i = 0; i < n-m; ++i)
     cn[i][0] = c[vn[i]][0];
-
-  //cout << n << ":" << m << endl;
-
-  //cout << "vn:" << endl;
-  //print_vector(vn, n-m);
-
-  //cout << "vb:" << endl;
-  //print_vector(vb, m);
 
   double** cb = create_pointer(m, 1);
   for (int i = 0; i < m; ++i)
@@ -46,6 +39,7 @@ int simplex_primal(double** c, double** A, double** &invB, double** b, int* &vb,
 
   double** r = matrix_subtraction(cn, matrix_transpose(matrix_multiplication(matrix_transpose(cb, m, 1), matrix_multiplication(invB, An, m, m, n-m), 1, m, n-m), 1, n-m), n-m, 1);
 
+  // Detectem si tenim una solucio optima.
   bool sbfo = true;
   for (int i = 0; i < n-m; ++i)
     if (r[i][0] < 0) {
@@ -62,6 +56,7 @@ int simplex_primal(double** c, double** A, double** &invB, double** b, int* &vb,
     return 1;
   }
 
+  // Escollim quina variable no basica entra a la base
   int q = -1;
   int indexq = 0;
 
@@ -87,9 +82,7 @@ int simplex_primal(double** c, double** A, double** &invB, double** b, int* &vb,
 
   double** db = matrix_multiplication(invB, matrix_opposite(Aq, m, 1), m, m, 1);
 
-  //cout << "Chose: (q, indexq) = (" << q << ", " << indexq << ")\n";
-  //print_matrix(db, m, 1);
-
+  // Detectem problema il·limitat
   bool ili = true;
   for (int i = 0; i < m; ++i)
     if (db[i][0] < 0) {
@@ -102,6 +95,7 @@ int simplex_primal(double** c, double** A, double** &invB, double** b, int* &vb,
     return 2;
   }
 
+  // Calculem valor de theta
   double theta = -1;
   int p = -1;
   int indexp = -1;
@@ -116,19 +110,17 @@ int simplex_primal(double** c, double** A, double** &invB, double** b, int* &vb,
       }
     }
 
-  //cout << "(p, indexp) = (" << p << ", " << indexp << ")\n";
-
-  // Actualitzacions:
+  // Fem actualitzacions:
   vb[indexp] = q;
   vn[indexq] = p;
-
-  //print_matrix(xb, m, 1);
 
   xb = matrix_addition(xb, matrix_escalate(theta, db, m, 1), m, 1);
   xb[indexp][0] = theta;
   z += theta*r[indexq][0];
   actualitza_inversa(invB, db, indexp, m);
 
+  // Detectem SBF degenerada, en cas que no estiguem utilitzant Bland,
+  // perque aixo podria fer que el nostre algorisme es quedes buclat
   if (theta == 0 && !bland) {
     printf("[simplexP]     Iteracio %4d : Solucio Basica Factible Degenerada detectada, no estem utilitzant la regla de Bland aixi que parem perque podria entrar en loop.\n", niter);
     print_matrix(xb, m, 1);

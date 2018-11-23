@@ -1,0 +1,10 @@
+reset;
+model nfl.mod;
+data nfl.dat;
+option solver cplex;
+display EQUIPS;
+display JORNADES;
+display PARTITS;
+solve;
+display x;
+#display x.status;
