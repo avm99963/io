@@ -1,0 +1,21 @@
+reset;
+model nflv2.mod;
+data nflv2.dat;
+option solver cplex;
+#display EQUIPS;
+#display JORNADES;
+#display PARTITS;
+solve;
+
+if solve_result = "solved" then {
+  #Ara escribim en el fitxer els resultats
+  printf "%d %d %d %d\n", n, r, s, jactual > ampl_result.out;
+  for {i in 1..(n-1)} {
+    for {j in (i+1)..n} {
+      for {k in 1..jactual} {
+        printf "%d %d %d %d\n", i, j, k, x[i,j,k] > ampl_result.out;
+      }
+    }
+  }
+}
+
