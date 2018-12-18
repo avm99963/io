@@ -2,9 +2,6 @@ reset;
 model nflv2.mod;
 data nflv2.dat;
 option solver cplex;
-#display EQUIPS;
-#display JORNADES;
-#display PARTITS;
 solve;
 
 if solve_result = "solved" then {

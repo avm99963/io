@@ -1,10 +1,17 @@
 #!/bin/bash
+
+# Definim les variables n, r, s i jmin
 pn=$1
 pr=$2
 ps=$3
-jmin=$(( (pn/2)*(pr+ps) - pr - 1 ))
+jmin=$(( (pn*(pr+ps))/2 - pr - 1 ))
+
+# Eliminem el fitxer de resultats si existeix
 rm -f ampl_result.out
 
+# Mentre no existeixi el fitxer de resultats (es
+# a dir, mentre no haguem trobat una solucio)
+# itera incrementat cada iteracio la jmin per 1
 while [ ! -f ampl_result.out ]
 do
   ((jmin++))

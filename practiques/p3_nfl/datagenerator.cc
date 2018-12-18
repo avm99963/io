@@ -32,12 +32,15 @@ int main(int argc, char *argv[]) {
   for (int i = 1; i <= n; ++i)
     for (int j = i+1; j <= n; ++j)
       for (int k = 1; k <= (n/2)*(r+s) - r; ++k) {
-        int v;
+        long double v;
         if (i > n/2 || j <= n/2) {
           // Partits INTRAdivisionals
           if (k == 1) v = 0;
-          else v = pow(2, k-2);
+          else v = pow((long long)2, (long long)k-2);
         } else v = 0; // Partits INTERdivisionals
+        if (v < 0) {
+          cerr << "NOOOO" << endl;
+        }
         file << i << " " << j << " " << k << " " << v << (i == n-1 && j == n && k == (n/2)*(r+s) - r ? ";" : "") << endl;
       }
 }

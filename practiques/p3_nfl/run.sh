@@ -1,3 +1,3 @@
 #!/bin/sh
-./datagenerator
+./datagenerator $1 $2 $3
 ampl nfl.run

@@ -1,0 +1,23 @@
+reset;
+model bc.mod;
+data bc.dat;
+option solver minos;
+solve;
+
+display time_elapsed;
+display y;
+
+if solve_result = "solved" then {
+  #Ara escribim en el fitxer els resultats
+  #printf "%d %d %d\n", n, r, s > ampl_result.out;
+  #for {i in 1..(n-1)} {
+  #  for {j in (i+1)..n} {
+  #    for {k in 1..kmax} {
+  #      printf "%d %d %d %d\n", i, j, k, x[i,j,k] > ampl_result.out;
+  #    }
+  #  }
+  #}
+}
+#if solve_result = "infeasible" then {
+#  print "No es possible programar el calendari sense descansos."
+#}

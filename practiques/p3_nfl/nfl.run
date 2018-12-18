@@ -2,16 +2,13 @@ reset;
 model nfl.mod;
 data nfl.dat;
 option solver cplex;
-display EQUIPS;
-display JORNADES;
-display PARTITS;
 solve;
 
 if solve_result = "solved" then {
   #Ara escribim en el fitxer els resultats
   printf "%d %d %d\n", n, r, s > ampl_result.out;
-  for {i in 1..(n/2)} {
-    for {j in (n/2 + 1)..n} {
+  for {i in 1..(n-1)} {
+    for {j in (i+1)..n} {
       for {k in 1..kmax} {
         printf "%d %d %d %d\n", i, j, k, x[i,j,k] > ampl_result.out;
       }

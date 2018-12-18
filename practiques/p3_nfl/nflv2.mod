@@ -27,6 +27,3 @@ subject to partits_inter_totals{i in 1..n/2, j in (n/2+1)..n}:
 subject to partits_per_jornada{i in EQUIPS, k in JORNADES}:
   (sum{j in 1..(i-1)}x[j,i,k]) + (sum{j in (i+1)..n}x[i,j,k]) <= 1;
 
-#subject to no_juguis_amb_tu_mateix{i in EQUIPS, k in JORNADES}:
-#  x[i,i,k] = 0;
-

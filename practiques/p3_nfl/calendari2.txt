@@ -1,0 +1,71 @@
+Provant amb jmin=11
+Generant fitxer de dades...
+Executant ampl...
+  CPLEX 12.8.0.0: integer infeasible.
+  221 MIP simplex iterations
+  0 branch-and-bound nodes
+  No basis.
+Provant amb jmin=12
+Generant fitxer de dades...
+Executant ampl...
+  CPLEX 12.8.0.0: optimal integer solution; objective 4094
+  208 MIP simplex iterations
+  0 branch-and-bound nodes
+Hem trobat la minima solucio amb 12 jornades
+=== JORNADA 1 ===
+* Equip 1 - Equip 2
+* Equip 3 - Equip 4
+* Equip 5 - Equip 6
+
+=== JORNADA 2 ===
+* Equip 1 - Equip 6
+* Equip 2 - Equip 3
+* Equip 4 - Equip 5
+
+=== JORNADA 3 ===
+* Equip 1 - Equip 3
+* Equip 2 - Equip 6
+* Equip 4 - Equip 5
+
+=== JORNADA 4 ===
+* Equip 1 - Equip 2
+* Equip 3 - Equip 5
+* Equip 4 - Equip 6
+
+=== JORNADA 5 ===
+* Equip 1 - Equip 2
+* Equip 3 - Equip 6
+* Equip 4 - Equip 5
+
+=== JORNADA 6 ===
+* Equip 1 - Equip 2
+* Equip 4 - Equip 5
+
+=== JORNADA 7 ===
+* Equip 1 - Equip 3
+* Equip 4 - Equip 6
+
+=== JORNADA 8 ===
+* Equip 1 - Equip 3
+* Equip 2 - Equip 4
+* Equip 5 - Equip 6
+
+=== JORNADA 9 ===
+* Equip 1 - Equip 3
+* Equip 2 - Equip 5
+* Equip 4 - Equip 6
+
+=== JORNADA 10 ===
+* Equip 1 - Equip 5
+* Equip 2 - Equip 3
+* Equip 4 - Equip 6
+
+=== JORNADA 11 ===
+* Equip 1 - Equip 4
+* Equip 2 - Equip 3
+* Equip 5 - Equip 6
+
+=== JORNADA 12 ===
+* Equip 2 - Equip 3
+* Equip 5 - Equip 6
+

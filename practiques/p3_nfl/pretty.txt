@@ -1,0 +1,46 @@
+=== JORNADA 1 ===
+* Equip 1 - Equip 8
+* Equip 2 - Equip 6
+* Equip 3 - Equip 9
+* Equip 5 - Equip 7
+
+=== JORNADA 2 ===
+* Equip 2 - Equip 9
+* Equip 3 - Equip 6
+* Equip 4 - Equip 7
+* Equip 5 - Equip 8
+
+=== JORNADA 3 ===
+* Equip 1 - Equip 7
+* Equip 3 - Equip 8
+* Equip 4 - Equip 6
+* Equip 5 - Equip 9
+
+=== JORNADA 4 ===
+* Equip 4 - Equip 8
+
+=== JORNADA 5 ===
+* Equip 2 - Equip 8
+
+=== JORNADA 6 ===
+* Equip 4 - Equip 9
+
+=== JORNADA 7 ===
+* Equip 2 - Equip 7
+
+=== JORNADA 8 ===
+
+=== JORNADA 9 ===
+* Equip 1 - Equip 9
+
+=== JORNADA 10 ===
+* Equip 3 - Equip 7
+
+=== JORNADA 11 ===
+
+=== JORNADA 12 ===
+* Equip 5 - Equip 6
+
+=== JORNADA 13 ===
+* Equip 1 - Equip 6
+
