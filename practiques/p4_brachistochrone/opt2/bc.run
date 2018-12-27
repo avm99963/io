@@ -1,0 +1,35 @@
+reset;
+model bc.mod;
+data bc.dat;
+option solver minos;
+option minos_options  ' \
+   summary_file=6       \
+   print_file=9         \
+   print_level=0        \
+   major_iterations=200 \
+   iterations=100000   \
+   optimality_tol=1e-6  \
+   penalty=100.0        \
+   completion=full      \
+  *major_damp=0.1       \
+   superbasics_limit=3000\
+   LU_factor_tol=1.9    \
+   LU_update_tol=1.9    \
+   solution=yes         \
+';
+solve;
+
+display time_elapsed;
+display x;
+
+display solve_result;
+
+#if solve_result = "solved" then {
+  #Ara escribim en el fitxer els resultats
+  for {i in 0..n} {
+    printf "%.10f %.10f\n", x[i], y[i] > plot.dat;
+  }
+#}
+#if solve_result = "infeasible" then {
+#  print "No es possible programar el calendari sense descansos."
+#}

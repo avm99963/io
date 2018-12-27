@@ -1,0 +1,21 @@
+reset;
+model bc.mod;
+data bc.dat;
+option solver minos;
+options minos_options 'superbasics_limit=1000';
+solve;
+
+display time_elapsed;
+display y;
+
+display solve_result;
+
+#if solve_result = "solved" then {
+  #Ara escribim en el fitxer els resultats
+  for {i in 0..n} {
+    printf "%.10f %.10f\n", x[i], y[i] > plot.dat;
+  }
+#}
+#if solve_result = "infeasible" then {
+#  print "No es possible programar el calendari sense descansos."
+#}

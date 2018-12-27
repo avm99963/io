@@ -1,0 +1,119 @@
+
+ Nonzeros allowed for in LU factors    10652
+
+ Nonzeros allowed for in LU factors    10667
+
+ Scale option  0,      Partial price       1
+ Partial price section size (A)            9
+ Partial price section size (I)            9
+
+
+
+ Matrix Statistics
+ -----------------
+               Total      Normal        Free       Fixed     Bounded
+ Rows              9           8           1           0           0
+ Columns           9           0           7           0           2
+
+ No. of matrix elements                   25     Density      30.864
+ Biggest                          1.0000E+00  (excluding fixed columns,
+ Smallest                         1.0000E+00   free rows, and RHS)
+
+ No. of objective coefficients             0
+
+
+ Nonlinear constraints       0     Linear constraints       9
+ Nonlinear variables         9     Linear variables         0
+ Jacobian  variables         0     Objective variables      9
+
+ Initial basis
+ -------------
+ No basis file supplied
+
+
+ Crash option  3
+
+ Crash on linear E  rows:
+1
+ 
+ Iterations
+ ----------
+ 
+ Itn      0 -- linear E rows feasible.   Obj =   0.000000000E+00
+
+ Crash on linear LG rows:
+ Slacks     1  Free cols     7  Preferred     0
+ Unit       0  Double        0  Triangle      0  Pad     1
+
+    Itn       rg  ninf      sinf       objective     LU  nobj  nsb  cond(H)
+      1 -1.0E+00     1 9.000E-06  0.00000000E+00     16
+ Itn      1 -- linear constraints satisfied.
+ funobj  sets       9   out of       9   objective  gradients.
+
+ Cheap test on funobj...
+ XXX  The objective gradients seem to be incorrect.
+ Gradient projected in two directions   5.33318599022E+01   2.50690580883E+01
+ Difference approximations              5.67805742986E+01   2.58327817980E+01
+ 
+ Itn      1 -- feasible solution.  Objective =   2.266080289E+02
+ 
+1
+ 
+ EXIT -- optimal solution found
+
+ Problem name                         
+ No. of iterations                  15   Objective value      2.2655095452E+02
+ No. of major iterations             1   Linear objective     0.0000000000E+00
+ Penalty parameter          100.000000   Nonlinear objective  2.2655095452E+02
+ No. of calls to funobj             35   No. of calls to funcon              0
+ No. of superbasics                  8   No. of basic nonlinears             8
+ No. of degenerate steps             0   Percentage                        .00
+ Max x                       9 5.0E-01   Max pi                      9 1.0E+00
+ Max Primal infeas           0 0.0E+00   Max Dual infeas            10 3.5E-08
+1
+ 
+ NAME                                 OBJECTIVE VALUE       2.2655095452E+02
+
+ STATUS         OPTIMAL SOLN          ITERATION     15    SUPERBASICS      8
+
+ OBJECTIVE               (Min)
+ RHS                    
+ RANGES                 
+ BOUNDS                 
+
+ SECTION 1 - ROWS
+
+  NUMBER  ...ROW.. STATE  ...ACTIVITY...  SLACK ACTIVITY  ..LOWER LIMIT.  ..UPPER LIMIT.  .DUAL ACTIVITY    ..I
+
+      10  r......1   SBS          .00023         -.00023          .00000           None           .00000      1
+      11  r......2   SBS          .00176         -.00176          .00000           None           .00000      2
+      12  r......3   SBS          .00636         -.00636          .00000           None           .00000      3
+      13  r......4   SBS          .01649         -.01649          .00000           None           .00000      4
+      14  r......5   SBS          .03565         -.03565          .00000           None           .00000      5
+      15  r......6   SBS          .06940         -.06940          .00000           None           .00000      6
+      16  r......7   SBS          .12816         -.12816          .00000           None           .00000      7
+      17  r......8   SBS          .23751         -.23750          .00000           None           .00000      8
+      18  r......9    BS          .               .                None            None         -1.0          9
+1
+ 
+ SECTION 2 - COLUMNS
+
+  NUMBER  .COLUMN. STATE  ...ACTIVITY...  .OBJ GRADIENT.  ..LOWER LIMIT.  ..UPPER LIMIT.  REDUCED GRADNT    M+J
+
+       1  x......1    LL          .00000       225.64381          .00000           None        225.64381     10
+       2  x......2    BS          .00023          .00000           None            None           .          11
+       3  x......3    BS          .00199          .00000           None            None           .          12
+       4  x......4    BS          .00836          .00000           None            None           .          13
+       5  x......5    BS          .02485          .00000           None            None           .          14
+       6  x......6    BS          .06050          .00000           None            None           .          15
+       7  x......7    BS          .12990          .00000           None            None           .          16
+       8  x......8    BS          .25806          .00000           None            None           .          17
+       9  x......9    BS          .49557          .00000           None          1.00000          .          18
+
+ funobj called with nstate =   2
+
+ Time for MPS input                            .00 seconds
+ Time for solving problem                      .00 seconds
+ Time for solution output                      .00 seconds
+ Time for constraint functions                 .00 seconds
+ Time for objective function                   .00 seconds
