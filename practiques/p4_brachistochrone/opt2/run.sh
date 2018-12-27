@@ -1,4 +1,4 @@
 #!/bin/sh
-./cubicgen $1 1 1 > bc.dat
+./uniformgen $1 1 1 > bc.dat
 ampl bc.run
 sh plot.sh
