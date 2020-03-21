@@ -10,7 +10,7 @@ show title
 set xlabel "X"
 set ylabel "Y"
 
-plot [0:1][1:0] "../brac.dat" with dots title "Solució analítica", "plot500.dat" with dots title "Model 3"
+plot [0:4][1.6:0] "../brac41.dat" with lines title "Solució analítica", "plot.dat" with lines title "Model 3"
 #plot [0:1][0:1] "plot.dat" using 2:1 with points
 
 END

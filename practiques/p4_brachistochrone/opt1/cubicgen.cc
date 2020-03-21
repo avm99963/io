@@ -3,7 +3,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
   if (argc < 4) {
-    cout << "Crida ./uniformgen n a b" << endl;
+    cout << "Crida ./cubicgen n a b" << endl;
     return 1;
   }
   

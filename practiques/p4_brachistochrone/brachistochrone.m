@@ -3,7 +3,7 @@ format long;
 
 global a
 global b
-a = 1/2;
+a = 4;
 b = 1;
 
 %y = r(t - sin(t))
